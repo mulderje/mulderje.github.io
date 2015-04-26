@@ -1,0 +1,71 @@
+==================================================================
+https://keybase.io/mulderje
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jonmulder.com
+  * I am mulderje (https://keybase.io/mulderje) on keybase.
+  * I have a public key with fingerprint C4C9 C9D4 0171 5D0F 15DC  9CC1 F02F 420E 1E07 1AD4
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "c4c9c9d401715d0f15dc9cc1f02f420e1e071ad4",
+            "host": "keybase.io",
+            "key_id": "f02f420e1e071ad4",
+            "uid": "e1d4034025b046d37881be1823b40200",
+            "username": "mulderje"
+        },
+        "service": {
+            "hostname": "jonmulder.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397256830,
+    "expire_in": 157680000,
+    "prev": null,
+    "seqno": 1,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.5
+Comment: https://keybase.io/crypto
+
+yMLOAnicbZF9TBN3HMYPaE0gW3hZ91oFcw7UyepdX+iLuAXnpuBMBOYQh+vaux94
+pb0r17tCh6DEVmWhEyNsyjoWhrBJJ25mm+sGih2SSAkBzdZBG0W2uJkwXuwSxnjz
+d8z9t/vjLr/n+3me53t3vY/HIHFRNy+fWLi8H5uPCvR8zSP5O9nqStTIkA5UV4mW
+gpVHMUWXANbKUjSH6lBCSWgJLanEcDWuIrFieIMCgRdj8mKlHAM4wNS4gVSi6ehB
+xiY4YIzRYAMyioEaPOgpEqr/w/MrA4DDcIUSk6uMmDKDVKg1GtwIcI1cYYQihgmg
+DbC0wQIgbeHNJGBNAK1KR6FqpwioVq5UPyJMDP0vJCMYCzRbWYZjCMYMRwc5zqoT
+nJzDKqDlwKh/FKI3UjQJXxwa7IC1UQyN6nBIEhwlpOIKrVquytAosHQUVFgpFugp
+gVCpMzQYvIQaYEd1NG82C4uV0QycwiJDCeyxUSW0geNZuLX/WpEIiYpDVomjhY+P
+xMUm/PdLVFkJSLC7vmve/nZXvqhruXpqVWbq0z2D42AmcuLd1MmMxSsvPBW/Nyc5
+cO/KYScmea+ycPTM2PMzPmf26qpf1kluhYPjnsWy4aS868ECsCvFEWlPOt700njj
+A1x96ujFGndu4xNl/UOuATOS+W1HarPXPyceyBR3B1rqWrJfLW3dnTi1Zqsti04c
+xLbt7L0hxT9YSiqKHkyKGWyK9x6zXpC53Q1PFrSZN90vfyyle7rfghs2zA/p/pjz
+ab3PHm7fWL2Q63j5tF0j/XR5a/WhHddCI9KRXw+cdQZM9b4J7hUm1Pp9qTMy35Dm
+8p85z4553MkXenMcNbVDH57aF45966zUtyntN69Mwo3eeT3sm5Qgtcdyx9qe+30P
+cXH4r6Kl26t3f/dx1kx0WnfulpjlO0fmrkr6DoXc9745Jz5tb7uVs5578cdmZja/
+9v4GT00bjh74Atl817XR2ZgZ7jN2Fi509r0h67rU4c7javDY0I7y7Vzozc7IERkR
+3xgunE78jF87XHX+7tT+vcE1/PvR4dmmG1tcKaECp2NbsE60709P9snWc4Uj066J
+4UW5yXW057jUpJ04+Yy3/Uv/P6GfGyos4vrRiUupgZstek9HoET7Tl3CV6j9Qeys
+5Qf77bXN6l3b+1/7KOLfI0Ku4vxPXLpEM568tO7zv9df/2Qgr4ivsJSBqsmH7R6O
+cg==
+=AvGa
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mulderje
+
+==================================================================
+
