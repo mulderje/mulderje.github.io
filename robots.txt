@@ -1,2 +1,2 @@
 User-Agent: *
-Disallow: /w
+Sitemap: https://www.jonmulder.com/sitemap.xml
