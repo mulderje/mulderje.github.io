@@ -8,4 +8,4 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Modernizr, Normalize.css, Font Awesome, Open Sans Font
+    1140.css, Modernizr, Normalize.css, Font Awesome, Open Sans Font
