@@ -22,6 +22,7 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700" rel="stylesheet" type="text/css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet" type="text/css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/1140/2.0/1140.min.css" rel="stylesheet" type="text/css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
     <style>
@@ -34,7 +35,20 @@
       }
       h1 { font-size: 1.9em; font-weight: 700; }
       a { text-decoration: none; color: #2c3e50; }
-      #container { width: 250px; margin:5em auto; text-align: center; }
+      .center { text-align: center; }
+      #fulljon {
+        position: fixed;
+        right:60px;
+        bottom:-10px;
+        z-index: -100;
+      }
+      #fulljon img { width: 90%; }
+      .showmobileonly { visibility: hidden; }
+      #fullmobilewrap { margin:70px 0 0 -2px; }
+      @media handheld, only screen and (max-width: 767px) {
+        .showmobileonly { visibility: visible; }
+        .hidemobile { visibility: hidden; }
+      }
       #follow-icons a { color: #ccc; }
       #follow-icons a:hover { color: #2c3e50; }
       #header img {
@@ -47,18 +61,25 @@
     </style>
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <img src="//www.jonmulder.com/img/me.jpg" alt="Jon Mulder" />
-        <h1>Jon Mulder</h1>
+    <div class="container12">
+      <div class="row">
+        <div id="fullmobilewrap" class="column5 prefix1"><p>
+          <div id="header" class="center">
+            <img class="showmobileonly" src="/img/me.jpg" alt="Jon Mulder" />
+            <h1>Jon Mulder</h1>
+          </div>
+          <div id="follow-icons" class="center">
+            <a href="https://facebook.com/mulderje" rel="me" target="_blank"><i class="fa fa-facebook-square fa-3x" title="Facebook"></i></a>
+            <a href="https://twitter.com/mulderje" rel="me" target="_blank"><i class="fa fa-twitter-square fa-3x" title="Twitter"></i></a>
+            <a href="https://instagram.com/mulderje" rel="me" target="_blank"><i class="fa fa fa-instagram fa-3x" title="Instagram"></i></a>
+            <a href="https://linkedin.com/in/mulderje" rel="me" target="_blank"><i class="fa fa-linkedin-square fa-3x" title="LinkedIn"></i></a>
+            <a href="https://github.com/mulderje" rel="me" target="_blank"><i class="fa fa-github-square fa-3x" title="GitHub"></i></a>
+          </div>
+        </p></div>
       </div>
-      <div id="follow-icons">
-        <a href="https://facebook.com/mulderje" rel="me" target="_blank"><i class="fa fa-facebook-square fa-3x" title="Facebook"></i></a>
-        <a href="https://twitter.com/mulderje" rel="me" target="_blank"><i class="fa fa-twitter-square fa-3x" title="Twitter"></i></a>
-        <a href="https://instagram.com/mulderje" rel="me" target="_blank"><i class="fa fa fa-instagram fa-3x" title="Instagram"></i></a>
-        <a href="https://linkedin.com/in/mulderje" rel="me" target="_blank"><i class="fa fa-linkedin-square fa-3x" title="LinkedIn"></i></a>
-        <a href="https://github.com/mulderje" rel="me" target="_blank"><i class="fa fa-github-square fa-3x" title="GitHub"></i></a>
-      </div>
+    </div>
+    <div id="fulljon">
+      <img src="/img/me_full.png" alt="Jon Mulder" class="hidemobile" />
     </div>
     <script type="application/ld+json">
     {
