@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jon Mulder</title>
 
-    <meta name="description" content="Jon Mulder — New York, NY.">
-    <meta name="keywords" content="jon mulder, mulderje, new york, amazon, account executive">
+    <meta name="description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
+    <meta name="keywords" content="jon mulder, mulderje, new york, doubleverify, product marketing, director">
 
     <meta property="og:title" content="Jon Mulder">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.jonmulder.com">
     <meta property="og:image" content="https://www.jonmulder.com/img/me.jpg">
-    <meta property="og:image:height" content="138">
-    <meta property="og:image:width" content="158">
-    <meta property="og:description" content="Jon Mulder — New York, NY.">
+    <meta property="og:image:height" content="786">
+    <meta property="og:image:width" content="689">
+    <meta property="og:description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mulderje">
@@ -52,20 +52,19 @@
         },
       }
     </script>
+
+    <style>
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      main { animation: fadeUp 0.4s ease both; }
+    </style>
   </head>
 
-  <body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center font-sans antialiased">
+  <body class="min-h-screen bg-gradient-to-br from-slate-50 via-stone-50 to-slate-100 flex items-center justify-center font-sans antialiased">
 
-    <!-- Decorative full-body portrait (desktop only, behind content) -->
-    <div class="fixed bottom-0 right-0 -z-10 hidden xl:block pointer-events-none select-none" aria-hidden="true">
-      <img
-        src="/img/me_full.png"
-        alt=""
-        class="h-screen w-auto object-contain object-bottom opacity-75"
-      >
-    </div>
-
-    <main class="text-center px-8 py-12 w-full max-w-xs">
+    <main class="text-center px-8 py-14 w-full max-w-xs">
 
       <!-- Avatar -->
       <img
@@ -73,19 +72,21 @@
         alt="Jon Mulder"
         width="112"
         height="112"
-        class="w-28 h-28 rounded-full object-cover ring-4 ring-white shadow-xl mx-auto mb-6"
+        fetchpriority="high"
+        decoding="async"
+        class="w-28 h-28 rounded-full object-cover ring-2 ring-slate-200 shadow-lg mx-auto mb-8"
       >
 
       <!-- Name & location -->
-      <h1 class="text-3xl font-bold tracking-tight text-slate-800">Jon Mulder</h1>
-      <p class="mt-1.5 text-sm font-light tracking-wide text-slate-500">New York, NY</p>
+      <h1 class="text-2xl font-semibold tracking-tight text-slate-800">Jon Mulder</h1>
+      <p class="mt-1.5 text-sm font-normal tracking-widest uppercase text-slate-400">New York, NY</p>
 
       <!-- Divider -->
-      <div class="w-10 h-px bg-slate-200 mx-auto my-7"></div>
+      <div class="w-8 h-px bg-slate-300 mx-auto my-8"></div>
 
       <!-- Social links -->
       <nav aria-label="Social profiles">
-        <ul class="flex items-center justify-center gap-7 list-none m-0 p-0">
+        <ul class="flex items-center justify-center gap-1 list-none m-0 p-0">
 
           <li>
             <a
@@ -93,7 +94,7 @@
               rel="me"
               target="_blank"
               aria-label="Facebook"
-              class="inline-block text-2xl text-slate-400 transition-all duration-200 hover:text-[#1877F2] hover:scale-110"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#1877F2] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
             ><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
           </li>
 
@@ -103,7 +104,7 @@
               rel="me"
               target="_blank"
               aria-label="X (Twitter)"
-              class="inline-block text-2xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
             ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
           </li>
 
@@ -113,7 +114,7 @@
               rel="me"
               target="_blank"
               aria-label="Instagram"
-              class="inline-block text-2xl text-slate-400 transition-all duration-200 hover:text-[#E1306C] hover:scale-110"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#E1306C] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
             ><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
           </li>
 
@@ -123,7 +124,7 @@
               rel="me"
               target="_blank"
               aria-label="LinkedIn"
-              class="inline-block text-2xl text-slate-400 transition-all duration-200 hover:text-[#0A66C2] hover:scale-110"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#0A66C2] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
             ><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
           </li>
 
@@ -133,7 +134,7 @@
               rel="me"
               target="_blank"
               aria-label="GitHub"
-              class="inline-block text-2xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
             ><i class="fa-brands fa-github" aria-hidden="true"></i></a>
           </li>
 
@@ -154,8 +155,8 @@
         "postalCode": "10011"
       },
       "image": "https://www.jonmulder.com/img/me.jpg",
-      "jobTitle": "Account Executive, Telco",
-      "worksFor": "Amazon",
+      "jobTitle": "Director, Product Marketing, Sales Enablement",
+      "worksFor": "DoubleVerify",
       "alumniOf": "Miami University",
       "name": "Jon Mulder",
       "url": "https://www.jonmulder.com",
