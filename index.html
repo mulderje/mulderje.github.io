@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jon Mulder</title>
 
-    <meta name="description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
-    <meta name="theme-color" content="#f8fafc">
+    <meta name="description" content="Jon Mulder — ad-tech strategy & enablement leader who aligns Sales and Product to grow revenue. Director, Product Marketing & Sales Enablement at DoubleVerify. New York, NY.">
+    <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#020617" media="(prefers-color-scheme: dark)">
 
     <link rel="canonical" href="https://www.jonmulder.com">
 
@@ -14,170 +15,130 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.jonmulder.com">
     <meta property="og:image" content="https://www.jonmulder.com/img/me.jpg">
-    <meta property="og:image:height" content="786">
-    <meta property="og:image:width" content="689">
-    <meta property="og:description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
+    <meta property="og:image:height" content="400">
+    <meta property="og:image:width" content="400">
+    <meta property="og:description" content="Ad-tech strategy & enablement leader who aligns Sales and Product to grow revenue. Director, Product Marketing & Sales Enablement at DoubleVerify.">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@mulderje">
     <meta name="twitter:image" content="https://www.jonmulder.com/img/me.jpg">
-    <meta name="twitter:description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
+    <meta name="twitter:description" content="Ad-tech strategy & enablement leader. Director, Product Marketing & Sales Enablement at DoubleVerify.">
 
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="icon" href="/favicon.ico">
 
-    <!-- Inter font -->
+    <!-- Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome 6 (brands + core only) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
-      crossorigin="anonymous"
-    >
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
-      crossorigin="anonymous"
-    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" crossorigin="anonymous">
 
-    <!-- Tailwind CSS (CDN) -->
+    <!--
+      JEM brand tokens (mirrors claude-workspace/tokens/tokens.css).
+      Source of truth: github.com/mulderje/claude-workspace → tokens/tokens.json
+    -->
+    <style>
+      :root {
+        --color-bg:#F8FAFC; --color-surface:#FFFFFF; --color-border:#E2E8F0;
+        --color-text:#0F172A; --color-text-muted:#64748B; --color-text-subtle:#7C8BA0;
+        --color-primary:#205EA6; --color-primary-hover:#1B4F8A;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-bg:#020617; --color-surface:#0F172A; --color-border:#1E293B;
+          --color-text:#F1F5F9; --color-text-muted:#94A3B8; --color-text-subtle:#64748B;
+          --color-primary:#4385BE; --color-primary-hover:#87AAD8;
+        }
+      }
+      @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+      main { animation: fadeUp .4s cubic-bezier(.2,0,0,1) both; }
+      @media (prefers-reduced-motion: reduce) { main { animation: none; } }
+    </style>
+
+    <!-- Tailwind (CDN) wired to the brand tokens -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-            },
+        darkMode: 'media',
+        theme: { extend: {
+          fontFamily: { sans: ['Inter','system-ui','-apple-system','Segoe UI','Roboto','sans-serif'] },
+          colors: {
+            bg:'var(--color-bg)', surface:'var(--color-surface)', border:'var(--color-border)',
+            text:'var(--color-text)', 'text-muted':'var(--color-text-muted)', 'text-subtle':'var(--color-text-subtle)',
+            primary:'var(--color-primary)', 'primary-hover':'var(--color-primary-hover)',
           },
-        },
+          letterSpacing: { widest:'0.18em' },
+        } },
       }
     </script>
-
-    <style>
-      @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(10px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      main { animation: fadeUp 0.4s ease both; }
-    </style>
   </head>
 
-  <body class="min-h-screen bg-gradient-to-br from-slate-50 via-stone-50 to-slate-100 flex items-center justify-center font-sans antialiased">
+  <body class="min-h-screen bg-bg text-text flex items-center justify-center font-sans antialiased">
 
-    <main class="text-center px-8 py-14 w-full max-w-xs">
+    <main class="text-center px-8 py-14 w-full max-w-lg">
 
       <!-- Avatar -->
-      <img
-        src="/img/me.jpg"
-        alt="Jon Mulder"
-        width="112"
-        height="112"
-        fetchpriority="high"
-        decoding="async"
-        class="w-28 h-28 rounded-full object-cover ring-2 ring-slate-200 shadow-lg mx-auto mb-8"
-      >
+      <img src="/img/me.jpg" alt="Jon Mulder" width="112" height="112"
+           fetchpriority="high" decoding="async"
+           class="w-28 h-28 rounded-full object-cover ring-2 ring-border shadow-[0_12px_32px_-8px_rgb(2_6_23/0.18)] mx-auto mb-7">
 
-      <!-- Name & location -->
-      <h1 class="text-2xl font-semibold tracking-tight text-slate-800">Jon Mulder</h1>
-      <p class="mt-1.5 text-sm font-normal tracking-widest uppercase text-slate-400">New York, NY</p>
+      <!-- Name + positioning -->
+      <h1 class="text-3xl font-semibold tracking-[-0.02em] text-text">Jon&nbsp;Mulder<span class="text-primary">.</span></h1>
+      <p class="mt-3 text-base leading-snug text-text-muted">
+        Ad-tech strategy &amp; enablement — aligning <span class="text-text font-medium">Sales</span> and <span class="text-text font-medium">Product</span> to grow revenue.
+      </p>
+      <p class="mt-3 text-xs font-medium tracking-widest uppercase leading-relaxed text-text-subtle">Product Marketing &amp; Sales Enablement · New York</p>
 
       <!-- Divider -->
-      <div class="w-8 h-px bg-slate-300 mx-auto my-8"></div>
+      <div class="w-8 h-px bg-border mx-auto my-7"></div>
 
-      <!-- Social links -->
+      <!-- Social -->
       <nav aria-label="Social profiles">
-        <ul class="flex items-center justify-center gap-1 list-none m-0 p-0">
-
-          <li>
-            <a
-              href="https://facebook.com/mulderje"
-              rel="me noopener noreferrer"
-              target="_blank"
-              aria-label="Facebook"
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#1877F2] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
-            ><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
-          </li>
-
-          <li>
-            <a
-              href="https://twitter.com/mulderje"
-              rel="me noopener noreferrer"
-              target="_blank"
-              aria-label="X (Twitter)"
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
-            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-          </li>
-
-          <li>
-            <a
-              href="https://instagram.com/mulderje"
-              rel="me noopener noreferrer"
-              target="_blank"
-              aria-label="Instagram"
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#E1306C] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
-            ><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-          </li>
-
-          <li>
-            <a
-              href="https://linkedin.com/in/mulderje"
-              rel="me noopener noreferrer"
-              target="_blank"
-              aria-label="LinkedIn"
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#0A66C2] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
-            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
-          </li>
-
-          <li>
-            <a
-              href="https://github.com/mulderje"
-              rel="me noopener noreferrer"
-              target="_blank"
-              aria-label="GitHub"
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
-            ><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-          </li>
-
+        <ul class="flex items-center justify-center gap-2 list-none m-0 p-0">
+          <li><a href="https://linkedin.com/in/mulderje" rel="me noopener noreferrer" target="_blank" aria-label="LinkedIn"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-text-muted transition-all duration-200 hover:text-primary hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg focus-visible:ring-primary"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+          <li><a href="https://github.com/mulderje" rel="me noopener noreferrer" target="_blank" aria-label="GitHub"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-text-muted transition-all duration-200 hover:text-primary hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg focus-visible:ring-primary"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/mulderje" rel="me noopener noreferrer" target="_blank" aria-label="X (Twitter)"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-text-muted transition-all duration-200 hover:text-primary hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg focus-visible:ring-primary"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="https://instagram.com/mulderje" rel="me noopener noreferrer" target="_blank" aria-label="Instagram"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-text-muted transition-all duration-200 hover:text-primary hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg focus-visible:ring-primary"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://facebook.com/mulderje" rel="me noopener noreferrer" target="_blank" aria-label="Facebook"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-text-muted transition-all duration-200 hover:text-primary hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-bg focus-visible:ring-primary"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
 
     </main>
 
-    <!-- Schema.org structured data -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "New York",
-        "addressRegion": "NY",
-        "postalCode": "10011"
-      },
-      "image": "https://www.jonmulder.com/img/me.jpg",
-      "jobTitle": "Director, Product Marketing, Sales Enablement",
-      "worksFor": "DoubleVerify",
-      "alumniOf": "Miami University",
       "name": "Jon Mulder",
-      "url": "https://www.jonmulder.com",
       "alternateName": "mulderje",
+      "url": "https://www.jonmulder.com",
+      "image": "https://www.jonmulder.com/img/me.jpg",
+      "jobTitle": "Director, Product Marketing & Sales Enablement",
+      "worksFor": { "@type": "Organization", "name": "DoubleVerify" },
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Miami University" },
+      "address": { "@type": "PostalAddress", "addressLocality": "New York", "addressRegion": "NY", "postalCode": "10011" },
       "sameAs": [
-        "https://facebook.com/mulderje",
+        "https://linkedin.com/in/mulderje",
+        "https://github.com/mulderje",
         "https://twitter.com/mulderje",
         "https://instagram.com/mulderje",
-        "https://linkedin.com/in/mulderje",
-        "https://github.com/mulderje"
+        "https://facebook.com/mulderje"
       ]
     }
     </script>
 
     <!-- Google Tag Manager -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8ZNXF"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8ZNXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=

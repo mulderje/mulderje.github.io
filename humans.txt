@@ -9,3 +9,9 @@
 
     HTML5, CSS3
     Tailwind CSS, Inter Font, Font Awesome 6
+
+# DESIGN
+
+    Color system adapted from Flexoki by Steph Ango (kepano) --
+    its stepped scale and ink-on-paper restraint, recolored to a
+    cool cobalt + slate palette. https://stephango.com/flexoki
