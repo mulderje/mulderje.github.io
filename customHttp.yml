@@ -1,0 +1,25 @@
+# AWS Amplify custom response headers (applied to every path).
+# Docs: https://docs.aws.amazon.com/amplify/latest/userguide/setting-custom-headers.html
+#
+# CSP note (pragmatic): 'unsafe-inline'/'unsafe-eval' in script-src are required
+# only by the Tailwind Play CDN (a runtime JIT compiler) and the inline
+# tailwind.config. Replacing that CDN with pre-built/committed CSS is the
+# prerequisite to dropping both and shipping a strict script-src 'self' policy.
+# SRI on the Font Awesome (cdnjs) <link>s is a separate pending follow-up.
+customHeaders:
+  - pattern: '**/*'
+    headers:
+      - key: 'Strict-Transport-Security'
+        value: 'max-age=31536000; includeSubDomains; preload'
+      - key: 'X-Content-Type-Options'
+        value: 'nosniff'
+      - key: 'X-Frame-Options'
+        value: 'DENY'
+      - key: 'X-XSS-Protection'
+        value: '0'
+      - key: 'Referrer-Policy'
+        value: 'same-origin'
+      - key: 'Permissions-Policy'
+        value: 'accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()'
+      - key: 'Content-Security-Policy'
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests"
