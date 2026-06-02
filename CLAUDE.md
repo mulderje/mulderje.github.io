@@ -24,9 +24,9 @@ The entire site is a single page (`index.html`) — a personal landing/jumper pa
 
 ### Layout
 
-- **Desktop (xl / 1280px+)**: A full-body photo of Jon (`img/me_full.png`) is fixed to the bottom-right as a decorative background element (`-z-10`, `opacity-75`, `hidden xl:block`). Content is centered in the viewport.
-- **Mobile/tablet**: The full-body photo is hidden. A circular headshot (`img/me.jpg`) is always shown in the centered card.
+- **All breakpoints**: A circular headshot (`img/me.jpg`) sits in a centered card with the name, positioning tagline, title/location, and social icons. The viewport is centered; there is no decorative background image.
 - Layout uses Tailwind's `min-h-screen flex items-center justify-center` pattern — no custom grid system.
+- The full-body photo (`img/me_full.png`) is retained as an asset but is not currently rendered.
 
 ### External Dependencies (CDN only, no build step)
 
