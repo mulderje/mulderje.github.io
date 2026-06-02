@@ -6,7 +6,7 @@
     <image:image>
        <image:loc>https://www.jonmulder.com/img/me.jpg</image:loc>
        <image:caption>Picture of Jon Mulder</image:caption>
-       <image:geo_location>Chicago, Illinois</image:geo_location>
+       <image:geo_location>New York, New York</image:geo_location>
     </image:image>
   </url>
 </urlset>

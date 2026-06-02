@@ -1,86 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head prefix="og: http://ogp.me/ns#">
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jon Mulder</title>
 
-    <meta name="description" content="Jumper page with ways to get ahold of me." />
-    <meta name="keywords" content="jon, jonathan, jon mulder, jonathan mulder, mulder, mulderje, advertising, marketing, chicago, digitas, miami university, miami oh, amazon, account executive, telco, cable" />
+    <meta name="description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
+    <meta name="theme-color" content="#f8fafc">
 
-    <meta property="og:title" content="Jon Mulder" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.jonmulder.com" />
-    <meta property="og:image" content="https://www.jonmulder.com/img/me.jpg" />
-    <meta property="og:image:height" content="138" />
-    <meta property="og:image:width" content="158" />
-    <meta property="og:description" content="Jumper page with ways to get ahold of me." />
+    <link rel="canonical" href="https://www.jonmulder.com">
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@mulderje" />
+    <meta property="og:title" content="Jon Mulder">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jonmulder.com">
+    <meta property="og:image" content="https://www.jonmulder.com/img/me.jpg">
+    <meta property="og:image:height" content="786">
+    <meta property="og:image:width" content="689">
+    <meta property="og:description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700" rel="stylesheet" type="text/css">
-    <link href="/css/1140.css" rel="stylesheet" type="text/css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@mulderje">
+    <meta name="twitter:image" content="https://www.jonmulder.com/img/me.jpg">
+    <meta name="twitter:description" content="Jon Mulder. Director, Product Marketing at DoubleVerify. New York, NY.">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 (brands + core only) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css"
+      crossorigin="anonymous"
+    >
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
 
     <style>
-      html, body {
-        font-size: 1em;
-        line-height: 1.65em;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        color: #444;
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
       }
-      h1 { font-size: 1.9em; font-weight: 700; }
-      a { text-decoration: none; color: #2c3e50; }
-      .center { text-align: center; }
-      #fulljon {
-        position: fixed;
-        right:60px;
-        bottom:-10px;
-        z-index: -100;
-      }
-      #fulljon img { width: 90%; }
-      .showmobileonly { visibility: hidden; }
-      #fullmobilewrap { margin:70px 0 0 -2px; }
-      @media handheld, only screen and (max-width: 767px) {
-        .showmobileonly { visibility: visible; }
-        .hidemobile { visibility: hidden; }
-      }
-      #follow-icons a { color: #ccc; }
-      #follow-icons a:hover { color: #2c3e50; }
-      #header img {
-        width: 8.63em;
-        height: 9.88em;
-        border-radius: 4.5em;
-        -moz-border-radius: 4.5em;
-        -webkit-border-radius: 4.5em;
-      }
+      main { animation: fadeUp 0.4s ease both; }
     </style>
   </head>
-  <body>
-    <div class="container12">
-      <div class="row">
-        <div id="fullmobilewrap" class="column5 prefix1">
-          <div id="header" class="center">
-            <img class="showmobileonly" src="/img/me.jpg" alt="Jon Mulder" />
-            <h1>Jon Mulder</h1>
-          </div>
-          <div id="follow-icons" class="center">
-            <a href="https://facebook.com/mulderje" rel="me" target="_blank"><i class="fa fa-facebook-square fa-3x" title="Facebook"></i></a>
-            <a href="https://twitter.com/mulderje" rel="me" target="_blank"><i class="fa fa-twitter-square fa-3x" title="Twitter"></i></a>
-            <a href="https://instagram.com/mulderje" rel="me" target="_blank"><i class="fa fa fa-instagram fa-3x" title="Instagram"></i></a>
-            <a href="https://linkedin.com/in/mulderje" rel="me" target="_blank"><i class="fa fa-linkedin-square fa-3x" title="LinkedIn"></i></a>
-            <a href="https://github.com/mulderje" rel="me" target="_blank"><i class="fa fa-github-square fa-3x" title="GitHub"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="fulljon">
-      <img src="/img/me_full.png" alt="Jon Mulder" class="hidemobile" />
-    </div>
+
+  <body class="min-h-screen bg-gradient-to-br from-slate-50 via-stone-50 to-slate-100 flex items-center justify-center font-sans antialiased">
+
+    <main class="text-center px-8 py-14 w-full max-w-xs">
+
+      <!-- Avatar -->
+      <img
+        src="/img/me.jpg"
+        alt="Jon Mulder"
+        width="112"
+        height="112"
+        fetchpriority="high"
+        decoding="async"
+        class="w-28 h-28 rounded-full object-cover ring-2 ring-slate-200 shadow-lg mx-auto mb-8"
+      >
+
+      <!-- Name & location -->
+      <h1 class="text-2xl font-semibold tracking-tight text-slate-800">Jon Mulder</h1>
+      <p class="mt-1.5 text-sm font-normal tracking-widest uppercase text-slate-400">New York, NY</p>
+
+      <!-- Divider -->
+      <div class="w-8 h-px bg-slate-300 mx-auto my-8"></div>
+
+      <!-- Social links -->
+      <nav aria-label="Social profiles">
+        <ul class="flex items-center justify-center gap-1 list-none m-0 p-0">
+
+          <li>
+            <a
+              href="https://facebook.com/mulderje"
+              rel="me noopener noreferrer"
+              target="_blank"
+              aria-label="Facebook"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#1877F2] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
+            ><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a
+              href="https://twitter.com/mulderje"
+              rel="me noopener noreferrer"
+              target="_blank"
+              aria-label="X (Twitter)"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
+            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a
+              href="https://instagram.com/mulderje"
+              rel="me noopener noreferrer"
+              target="_blank"
+              aria-label="Instagram"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#E1306C] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
+            ><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a
+              href="https://linkedin.com/in/mulderje"
+              rel="me noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-[#0A66C2] hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
+            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+          </li>
+
+          <li>
+            <a
+              href="https://github.com/mulderje"
+              rel="me noopener noreferrer"
+              target="_blank"
+              aria-label="GitHub"
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full text-xl text-slate-400 transition-all duration-200 hover:text-slate-900 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-slate-400"
+            ><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </li>
+
+        </ul>
+      </nav>
+
+    </main>
+
+    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -92,8 +159,8 @@
         "postalCode": "10011"
       },
       "image": "https://www.jonmulder.com/img/me.jpg",
-      "jobTitle": "Account Executive, Telco",
-      "worksFor": "Amazon",
+      "jobTitle": "Director, Product Marketing, Sales Enablement",
+      "worksFor": "DoubleVerify",
       "alumniOf": "Miami University",
       "name": "Jon Mulder",
       "url": "https://www.jonmulder.com",
@@ -103,11 +170,11 @@
         "https://twitter.com/mulderje",
         "https://instagram.com/mulderje",
         "https://linkedin.com/in/mulderje",
-        "https://github.com/mulderje",
-        "https://plus.google.com/+JonMulder"
+        "https://github.com/mulderje"
       ]
     }
     </script>
+
     <!-- Google Tag Manager -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8ZNXF"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -117,5 +184,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-K8ZNXF');</script>
     <!-- End Google Tag Manager -->
+
   </body>
 </html>

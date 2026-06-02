@@ -7,5 +7,5 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    1140.css, Modernizr, Normalize.css, Font Awesome, Open Sans Font
+    HTML5, CSS3
+    Tailwind CSS, Inter Font, Font Awesome 6
