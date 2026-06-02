@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+      Content-Security-Policy (meta-deliverable directives only).
+      'unsafe-inline'/'unsafe-eval' are required by the Tailwind Play CDN
+      (runtime JIT) and the inline tailwind.config; removing that CDN in
+      favor of pre-built CSS would let this tighten to a strict policy.
+      Note: frame-ancestors, X-Frame-Options and X-Content-Type-Options
+      cannot be set on GitHub Pages (no response headers) and are omitted.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <title>Jon Mulder</title>
 
     <meta name="description" content="Jon Mulder — ad-tech strategy & enablement leader who aligns Sales and Product to grow revenue. Director, Product Marketing & Sales Enablement at DoubleVerify. New York, NY.">
@@ -136,15 +148,6 @@
       ]
     }
     </script>
-
-    <!-- Google Tag Manager -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8ZNXF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K8ZNXF');</script>
-    <!-- End Google Tag Manager -->
 
   </body>
 </html>

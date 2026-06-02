@@ -48,7 +48,19 @@ Each icon uses Font Awesome 6 brand class syntax: `fa-brands fa-<name>`. Twitter
 - Schema.org `Person` JSON-LD with job title, employer, location, and `sameAs` social profile links
 - Open Graph tags (`og:title`, `og:image`, `og:description`)
 - Twitter Card (`summary` type, `@mulderje`)
-- Google Tag Manager snippet (container `GTM-K8ZNXF`)
+
+### Security
+
+- **Content-Security-Policy** is set via `<meta http-equiv>` in `<head>` (GitHub Pages serves no response headers, so only meta-deliverable CSP directives apply — `frame-ancestors`, `X-Frame-Options`, and `X-Content-Type-Options` cannot be enforced without a proxy in front of Pages).
+- The policy still allows `'unsafe-inline'`/`'unsafe-eval'` because the **Tailwind Play CDN** is a runtime JIT compiler. Swapping it for pre-built/committed CSS is the prerequisite to a strict CSP.
+- `<meta name="referrer" content="strict-origin-when-cross-origin">` limits referrer leakage.
+- **Pending: SRI.** The Font Awesome `cdnjs` `<link>`s should carry `integrity` (sha384) + `crossorigin`. Generate the hashes against the exact files and never hardcode unverified values:
+  ```sh
+  for f in fontawesome.min.css brands.min.css; do
+    curl -fsSL "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/$f" \
+      | openssl dgst -sha384 -binary | openssl base64 -A; echo "  <- $f"
+  done
+  ```
 
 ### Verification & Identity Files
 
