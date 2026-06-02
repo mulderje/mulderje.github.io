@@ -4,11 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Static GitHub Pages personal site for Jon Mulder, served at `www.jonmulder.com` (configured via `CNAME`). There is no build system, no package manager, no test suite, and no linter. All content is hand-authored HTML committed directly to the repository.
+Static personal site for Jon Mulder, served at `www.jonmulder.com`, hosted on **AWS Amplify**. There is no build system, no package manager, no test suite, and no linter. All content is hand-authored HTML committed directly to the repository. (`CNAME` is a vestigial artifact from the earlier GitHub Pages setup.)
 
 ## Deployment
 
-Pushing to the `main` branch triggers GitHub Pages to deploy automatically. No build step — files are served as-is.
+Pushing to the connected branch triggers an Amplify build/deploy; the site itself has no build step — files are served as-is. Security response headers are configured in **`customHttp.yml`** at the repo root and applied by Amplify to every path (see [Amplify custom headers](https://docs.aws.amazon.com/amplify/latest/userguide/setting-custom-headers.html)).
 
 To preview locally, any static file server works:
 
@@ -51,9 +51,10 @@ Each icon uses Font Awesome 6 brand class syntax: `fa-brands fa-<name>`. Twitter
 
 ### Security
 
-- **Content-Security-Policy** is set via `<meta http-equiv>` in `<head>` (GitHub Pages serves no response headers, so only meta-deliverable CSP directives apply — `frame-ancestors`, `X-Frame-Options`, and `X-Content-Type-Options` cannot be enforced without a proxy in front of Pages).
-- The policy still allows `'unsafe-inline'`/`'unsafe-eval'` because the **Tailwind Play CDN** is a runtime JIT compiler. Swapping it for pre-built/committed CSS is the prerequisite to a strict CSP.
-- `<meta name="referrer" content="strict-origin-when-cross-origin">` limits referrer leakage.
+All security headers are delivered as **real HTTP response headers** via `customHttp.yml` (Amplify) — not meta tags. The set: `Strict-Transport-Security` (1yr + preload), `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `X-XSS-Protection: 0` (the legacy auditor is deprecated/discouraged), `Referrer-Policy: same-origin`, `Permissions-Policy` (unused features disabled), and `Content-Security-Policy`.
+
+- The CSP is **pragmatic**: it still allows `'unsafe-inline'`/`'unsafe-eval'` in `script-src` because the **Tailwind Play CDN** is a runtime JIT compiler and `tailwind.config` is inline. Replacing that CDN with pre-built/committed CSS is the prerequisite to a strict `script-src 'self'` policy (planned follow-up).
+- Do **not** add a `<meta http-equiv="Content-Security-Policy">` — the header is the single source of truth; a divergent meta CSP would be enforced simultaneously and could break the page.
 - **Pending: SRI.** The Font Awesome `cdnjs` `<link>`s should carry `integrity` (sha384) + `crossorigin`. Generate the hashes against the exact files and never hardcode unverified values:
   ```sh
   for f in fontawesome.min.css brands.min.css; do
